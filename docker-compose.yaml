@@ -18,7 +18,7 @@ services:
   project:
     image: project:2.0
     build:
-      context: .
+      context: server
       dockerfile: Dockerfile
     depends_on:
       db:
