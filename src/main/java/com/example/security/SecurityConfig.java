@@ -47,7 +47,7 @@ public class SecurityConfig {
                 .cors(AbstractHttpConfigurer::disable)
                 .authorizeRequests(authorizeRequests ->
                         authorizeRequests
-                                .requestMatchers("/account", "/shoppingCart").authenticated()
+                                .requestMatchers("/account", "/basket").authenticated()
                                 .anyRequest().permitAll()
                 )
                 .formLogin((form) -> form

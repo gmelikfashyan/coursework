@@ -19,15 +19,13 @@ public class UserController
     public String getRegistration(Model model)
     {
         model.addAttribute("userReg", new User());
-        System.out.println("getRegistration из User");
-        return "enter";
+        return "authorization";
     }
 
-    @PostMapping("reg")
-    public String addNewUser(@ModelAttribute("userReg") User user)
+    @PostMapping("registration")
+    public String addUser(@ModelAttribute("userReg") User user)
     {
         userService.addUser(user);
-
         return "redirect:login";
     }
 }

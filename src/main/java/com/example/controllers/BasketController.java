@@ -37,14 +37,14 @@ public class BasketController {
 
     private AmountsProduct amountsProduct = new AmountsProduct(1);
 
-    @PostMapping("/shoppingCartPost")
+    @PostMapping("/basketPost")
     public String getNumberOfItems(@ModelAttribute AmountsProduct amountsProduct)
     {
         this.amountsProduct = amountsProduct;
-        return "redirect:/shoppingCart";
+        return "redirect:/basket";
     }
 
-    @GetMapping("/shoppingCart")
+    @GetMapping("/basket")
     public String getShoppingCart(Model model)
     {
         Order order = new Order();
@@ -58,7 +58,7 @@ public class BasketController {
         }
         model.addAttribute("amountsProduct", amountsProduct);
         model.addAttribute("order", order);
-        return "shoppingCart";
+        return "basket";
     }
 
     @PostMapping("/add-order")

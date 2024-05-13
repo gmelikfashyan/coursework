@@ -17,13 +17,13 @@
     <a href ="file:///D:/ркчир/пр1/index.html"><img src = "/static/images/android-chrome-512x512.png" width="64" height="64"></a>
     <nav class="header-nav">
         <ul class="header-left-nav">
-            <li> <a href="/catalog">Каталог</a></li>
+            <li> <a href="/productcatalog">Каталог</a></li>
             <li> <a href="/account">Личный кабинет</a></li>
             <li> <a class="nav_link" href="#" onclick="submitForm()">Корзина</a></li>
         </ul>
     </nav>
 </header>
-<form id="myForm" th:action="@{/shoppingCartPost}" th:object="${amountsProduct}" th:method="POST" style="display: none;">
+<form id="myForm" th:action="@{/basketPost}" th:object="${amountsProduct}" th:method="POST" style="display: none;">
     <input id="inputItems" style="display: none;" readonly th:field="*{number}">
 </form>
 <main class="cart-main">

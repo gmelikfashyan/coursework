@@ -16,13 +16,13 @@
     <a href ="file:///D:/ркчир/пр1/index.html"><img src = "/static/images/android-chrome-512x512.png" width="64" height="64"></a>
     <nav class="header-nav">
         <ul class="header-left-nav">
-            <li> <a href="/catalog">Каталог</a></li>
+            <li> <a href="/productcatalog">Каталог</a></li>
             <li> <a href="/account">Личный кабинет</a></li>
             <li> <a class="nav_link" href="#" onclick="submitForm()">Корзина</a></li>
         </ul>
     </nav>
 </header>
-<form id="myForm" th:action="@{/shoppingCartPost}" th:object="${amountsProduct}" th:method="POST" style="display: none;">
+<form id="myForm" th:action="@{/basketPost}" th:object="${amountsProduct}" th:method="POST" style="display: none;">
     <input id="inputItems" style="display: none;" readonly th:field="*{number}">
 </form>
 <main class="account-main">
@@ -58,46 +58,6 @@
             </div>
         </div>
     </div>
-<!--
-    <div class="userContainer">
-        <div id="myContacts" class="contactsMenu" th:object="${user}">
-            <div class="userHeader">
-                <p>Личные данные</p>
-            </div>
-            <div class="textInput">
-                <p th:text="${'Имя: ' + user.getName()}"></p>
-                <p th:text="${'Фамилия: ' + user.getSurName()}"></p>
-                <p th:text="${'Email: ' + user.getUsername()}"></p>
-            </div>
-            <form action="/logout" method="GET" style="position: absolute; bottom: 20px; right: 20px;">
-                <button class="shineButton" type="submit">Выйти</button>
-            </form>
-        </div>
-    </div>
-
-    <div class="cart">
-        <h1>Ваши курсы</h1>
-        <div class="orders" th:each="order : ${orders}">
-            <div class="simpleOrder">
-                <div class="orderDescription">
-                    <p th:text="${'Дата: ' + order.getOrderDate()}"></p>
-                    <p th:text="${'Сумма: ' + order.getTotalCost() + ' ₽'}"></p>
-                </div>
-                <div th:each="prod : ${order.getOrderItems()}" class="product">
-                    <div class="productWrapper">
-                        <img th:src="@{'/static/images/' + ${prod.getProduct().getId()} + '.webp'}">
-                        <div class="caption">
-                            <div class="text">
-                                <p class="title" th:text="${prod.getProduct().getName()}"></p>
-                                <p class="info" th:text="${'Цена: ' + prod.getProduct().getProductPrice()  + ' ₽'}"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
--->
 </main>
 
 

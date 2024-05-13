@@ -40,12 +40,12 @@ public class OrderController {
         return "redirect:account";
     }
 
-    @GetMapping("/catalog")
+    @GetMapping("/productcatalog")
     public String getCatalog(Model model)
     {
         model.addAttribute("amountsProduct", amountsProduct);
         model.addAttribute("productList", productService.findAll());
-        return "catalog";
+        return "productcatalog";
     }
 
     @GetMapping("/account")
