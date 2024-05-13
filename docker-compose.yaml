@@ -15,10 +15,10 @@ services:
       timeout: 5s
       retries: 5
 
-  project:
-    image: project:2.0
+  backend:
+    image: backend:1.0
     build:
-      context: server
+      context: .
       dockerfile: Dockerfile
     depends_on:
       db:

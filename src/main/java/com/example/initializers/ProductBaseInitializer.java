@@ -72,5 +72,15 @@ public class ProductBaseInitializer {
         product10.setName("Хлопковая футболка с принтом");
         product10.setBrand("REEBOK");
         product10.setProductPrice("2390");
+        productRepository.save(product1);
+        productRepository.save(product2);
+        productRepository.save(product3);
+        productRepository.save(product4);
+        productRepository.save(product5);
+        productRepository.save(product6);
+        productRepository.save(product7);
+        productRepository.save(product8);
+        productRepository.save(product9);
+        productRepository.save(product10);
     }
 }

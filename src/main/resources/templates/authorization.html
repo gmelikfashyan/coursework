@@ -34,7 +34,7 @@
     </form>
 
 
-    <form id="regForm" class="logForm" style="display: none;" th:action="@{/reg}" th:object="${userReg}" th:method = "POST">
+    <form id="regForm" class="logForm" style="display: none;" th:action="@{/registration}" th:object="${userReg}" th:method = "POST">
         <h2 class="headAut">Регистрация</h2>
         <div class = "textInput">
             <input type="text" id="username" pattern = "^[а-яА-ЯёЁa-zA-Z]{3,}$" placeholder="Имя" th:field="*{name}" required>
