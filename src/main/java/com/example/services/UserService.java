@@ -22,13 +22,6 @@ public class UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    public void addUser(User user) {
-        if (!userRepository.existsByUsername(user.getUsername())) {
-            user.setPassword(passwordEncoder.encode(user.getPassword()));
-            userRepository.save(user);
-        }
-    }
-
     public void save(User user)
     {
         userRepository.save(user);
@@ -48,8 +41,12 @@ public class UserService {
     {
         return userRepository.findByUsername(username);
     }
-
-
+    public void addUser(User user) {
+        if (!userRepository.existsByUsername(user.getUsername())) {
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
+            userRepository.save(user);
+        }
+    }
     public User findUserById(Long id)
     {
         return userRepository.findUserById(id);

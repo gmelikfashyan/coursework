@@ -16,8 +16,6 @@ public class OrderService
 {
     private OrderRepository orderRepository;
 
-    private OrderItemRepository orderItemRepository;
-
     public Iterable<Order> getOrdersByUserId(long userId)
     {
         return orderRepository.findAllByUserId(userId);
@@ -28,8 +26,10 @@ public class OrderService
         orderRepository.save(order);
     }
 
+    private OrderItemRepository orderItemRepository;
     public void saveOrderItem(OrderItem orderItem)
     {
         orderItemRepository.save(orderItem);
     }
+
 }

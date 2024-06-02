@@ -13,28 +13,10 @@ import java.util.List;
 @AllArgsConstructor
 @Setter
 @Getter
-public class CustomUserDetails implements UserDetails
+public class MyUserDetails implements UserDetails
 {
 
     private User user;
-
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of();
-    }
-
-    @Override
-    public String getPassword()
-    {
-        return user.getPassword();
-    }
-
-    @Override
-    public String getUsername()
-    {
-        return user.getUsername();
-    }
 
     @Override
     public boolean isAccountNonExpired() {
@@ -47,8 +29,24 @@ public class CustomUserDetails implements UserDetails
     }
 
     @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of();
+    }
+
+    @Override
+    public String getPassword()
+    {
+        return user.getPassword();
+    }
+    @Override
     public boolean isCredentialsNonExpired() {
         return true;
+    }
+
+    @Override
+    public String getUsername()
+    {
+        return user.getUsername();
     }
 
     @Override

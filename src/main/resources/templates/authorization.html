@@ -8,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Russo+One&display=swap" rel="stylesheet">
-    <link href = "/static/css/enter.css" rel = "stylesheet">
-    <link href = "/static/css/general.css" rel = "stylesheet">
+    <link href = "/static/css/style2.css" rel = "stylesheet">
     <link href = "/static/css/style1.css" rel = "stylesheet">
 </head>
 <body>
@@ -22,31 +21,30 @@
     </nav>
 </header>
 
-<main>
-    <form id="loginForm" class="logForm" th:action="@{/login}" th:object="${userReg}" th:method="POST">
+<main class="main-aut">
+    <form id="enterForm" class="form-enter" th:action="@{/login}" th:object="${userReg}" th:method="POST">
         <h2 class="headAut">Авторизация</h2>
         <div class = "textInput">
             <input type="text" id="loginUsername" placeholder="Email" th:field="*{username}" required>
             <input type="password" id="loginPassword" placeholder="Пароль" th:field="*{password}" required>
             <button type="submit" class = "enterBut">Войти</button>
         </div>
-        <button id = "registerNow" class = "anotherReg" onclick="clearLogIn()">Создать аккаунт</button>
+        <button id = "let-register" class = "anotherReg" onclick="letRegister()">Создать аккаунт</button>
     </form>
 
 
-    <form id="regForm" class="logForm" style="display: none;" th:action="@{/registration}" th:object="${userReg}" th:method = "POST">
+    <form id="registration-form" class="form-enter" style="display: none;" th:action="@{/registration}" th:object="${userReg}" th:method = "POST">
         <h2 class="headAut">Регистрация</h2>
         <div class = "textInput">
-            <input type="text" id="username" pattern = "^[а-яА-ЯёЁa-zA-Z]{3,}$" placeholder="Имя" th:field="*{name}" required>
-            <input type="text" id="userSurname" pattern = "^[а-яА-ЯёЁa-zA-Z]{3,}$"  placeholder="Фамилия" th:field="*{surName}" required>
-            <input type="email" pattern = "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" placeholder="Почта" th:field="*{username}" required>
-<!--            <input type="tel" pattern="\+?[\d]{5,40}" id="phoneNumber" placeholder="Номер телефона" th:field="*{phoneNumber}" required>-->
-            <input type="password" id="password" placeholder="Пароль" th:field="*{password}" oninput="showConfirmation()" required>
-            <input type="password" id="confirmation" style="display: none;" placeholder="Подтвердить пароль" required>
-            <div id="error-message" style="display: none; color: red;">Пароли не совпадают</div>
-            <div class = "enterBut regBut" onclick="conf()">Зарегестрироваться</div>
+            <input type="text" id="username" placeholder="Имя" th:field="*{name}" required>
+            <input type="text" id="userSurname" placeholder="Фамилия" th:field="*{surName}" required>
+            <input type="email" id="email" placeholder="Почта" th:field="*{username}" required>
+            <input type="password" id="password" placeholder="Пароль" th:field="*{password}" oninput="verifyDisplay()" required>
+            <div id="error" style="display: none; color: white; margin-bottom: 10px; font-family: 'Noto Sans', sans-serif">Пароли не совпадают</div>
+            <input type="password" id="verify-password" style="display: none; margin-left: 20px" placeholder="Подтвердить пароль" required>
+            <div class = "enterBut regBut" onclick="verifyPas()">Зарегестрироваться</div>
         </div>
-        <button id = "loginNow" class = "anotherReg" onclick="clearReg()">Войти</button>
+        <button id = "let-enter" class = "anotherReg" onclick="letEnter()">Войти</button>
     </form>
 </main>
 
@@ -93,10 +91,9 @@
         </section>
         <p><small>© 2023 ManStyle. Магазин одежды</small></p>
     </div>
-    <script src = "/static/js/number-of-items.js"></script>
 </footer>
 
 
-<script src="/static/js/sign.js"></script>
+<script src="/static/js/functions.js"></script>
 </body>
 </html>

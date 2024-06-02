@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Russo+One&display=swap" rel="stylesheet">
-    <link href = "/static/css/catalog.css" rel = "stylesheet">
-    <link href = "/static/css/general.css" rel = "stylesheet">
+
+    <link href = "/static/css/style2.css" rel = "stylesheet">
     <link href = "/static/css/style1.css" rel = "stylesheet">
     <title>Каталог</title>
 </head>
@@ -45,7 +45,7 @@
             <div class="button-wrapper">
                 <p class="price price-katalog" th:id="'info' + ${prod.getId()}" th:text="${prod.getProductPrice() + ',00 ₽'}"></p>
                 <div class="wrap-but">
-                    <button class="buyIt" id="buyButton" th:attr="onclick=|addToCart('${prod.getId()}')|" style="width: 40px; height: 40px; display: flex;
+                    <button class="buyBut" id="buyButton" th:attr="onclick=|addBasket('${prod.getId()}')|" style="width: 40px; height: 40px; display: flex;
                                     align-items: center;
                                     justify-content: center;
                                     text-decoration: none;
@@ -55,38 +55,13 @@
             </div>
         </li>
     </ul>
-    <!--
-    <div class="container">
-        <div class="catalogFlex">
-            <div class="catalog">
-                <div class="product" th:each="prod : ${coursList}">
-                    <div class="productWrapper">
-                        <img th:src="@{'/static/images/' + ${prod.getId()} + '.webp'}" th:id="'img' + ${prod.getId()}">
-                        <div class="caption">
-                            <div class="text">
-                                <p class="title" th:id="'title' + ${prod.getId()}" th:text="${prod.getName()}"></p>
-                                <p class="info" th:id="'info' + ${prod.getId()}" th:text="${prod.getProductPrice() + ',00 ₽'}"></p>
-                                <div class="description">
-                                    <p th:text="${prod.getBrand()}"></p>
-                                </div>
-                            </div>
-                            <div class="buttonContainer">
-                                <button class="buyIt" id="buyButton" th:attr="onclick=|addToCart('${prod.getId()}')|">Добавить</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-    <script src = "/static/js/order-gods.js"></script>
+    <script src = "/static/js/functions.js"></script>
 </main>
 <<script>
     window.onload = function () {
-        getNumberOfItems();
+        getAmount();
     };
-    setInterval(fillCartItems, 1000);
+    setInterval(fillBasket, 1000);
 </script>
 
 <footer class="registration-footer">
@@ -132,7 +107,6 @@
         </section>
         <p><small>© 2023 ManStyle. Магазин одежды</small></p>
     </div>
-    <script src = "/static/js/number-of-items.js"></script>
 </footer>
 
 

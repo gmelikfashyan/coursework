@@ -5,13 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4256571-0c63-4c8d-98b5-1f5c21541ef0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/styleBasket.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/functions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/application.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/BasketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/BasketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/security/CustomUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/security/MyUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/security/MySecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/services/CustomUserServiceDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/services/MyUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/services/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/account.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/styleAccount.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/catalog.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/enter.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/shopping-cart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/number-of-items.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/order-gods.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/basketFunctions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/sign.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/authorization.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/authorization.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/basket.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/basket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productcatalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/productcatalog.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints>
+      <file url="file://$PROJECT_DIR$/src/main/java/com/example/entities/User.java" />
+    </disable_hints>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -24,7 +63,22 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
-        <projects_view />
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="demo" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="demo" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
       </state>
     </system>
   </component>
@@ -34,6 +88,7 @@
         <option value="CSS File" />
         <option value="Class" />
         <option value="Dockerfile" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -61,6 +116,8 @@
     &quot;Gradle.ApplicationTests.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Build coursework.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.DemoApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.coursework [dependencies].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.coursework.executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -81,7 +138,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;database.query.execution&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -166,6 +223,28 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="coursework [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="demo.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.Application" />
@@ -182,6 +261,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.coursework [dependencies]" />
         <item itemvalue="Gradle.ApplicationTests" />
         <item itemvalue="Gradle.DemoApplicationTests" />
       </list>
@@ -209,7 +289,14 @@
       <workItem from="1715467609763" duration="6579000" />
       <workItem from="1715510223119" duration="20958000" />
       <workItem from="1715549740529" duration="1279000" />
-      <workItem from="1715584054788" duration="15647000" />
+      <workItem from="1715584054788" duration="26089000" />
+      <workItem from="1715682173445" duration="39000" />
+      <workItem from="1715682231391" duration="9473000" />
+      <workItem from="1717009064258" duration="659000" />
+      <workItem from="1717019722327" duration="1263000" />
+      <workItem from="1717236100691" duration="15230000" />
+      <workItem from="1717277256978" duration="5096000" />
+      <workItem from="1717317790121" duration="1322000" />
     </task>
     <servers />
   </component>

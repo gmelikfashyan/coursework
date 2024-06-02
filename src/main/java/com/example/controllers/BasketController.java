@@ -4,7 +4,7 @@ import com.example.entities.Product;
 import com.example.entities.AmountsProduct;
 import com.example.entities.Order;
 import com.example.entities.OrderItem;
-import com.example.security.CustomUserDetails;
+import com.example.security.MyUserDetails;
 import com.example.services.EmailService;
 import com.example.services.OrderService;
 import lombok.extern.slf4j.Slf4j;
@@ -26,24 +26,19 @@ import java.util.List;
 public class BasketController {
     @Autowired
     private OrderService orderService;
-
     private final EmailService emailService;
-
     public BasketController(OrderService orderService, EmailService emailService)
     {
         this.orderService = orderService;
         this.emailService = emailService;
     }
-
     private AmountsProduct amountsProduct = new AmountsProduct(1);
-
     @PostMapping("/basketPost")
     public String getNumberOfItems(@ModelAttribute AmountsProduct amountsProduct)
     {
         this.amountsProduct = amountsProduct;
         return "redirect:/basket";
     }
-
     @GetMapping("/basket")
     public String getShoppingCart(Model model)
     {
@@ -60,15 +55,14 @@ public class BasketController {
         model.addAttribute("order", order);
         return "basket";
     }
-
     @PostMapping("/add-order")
     public String addNewOrder(@ModelAttribute Order order, @ModelAttribute OrderItem orderItems,
-                              @AuthenticationPrincipal CustomUserDetails customUserDetails)
+                              @AuthenticationPrincipal MyUserDetails myUserDetails)
     {
+        order.setUser(myUserDetails.getUser());
         LocalDate currentDate = LocalDate.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         order.setOrderDate(currentDate.format(formatter));
-        order.setUser(customUserDetails.getUser());
         ArrayList<String> arrayList = new ArrayList<>();
         for (OrderItem orderItem : order.getOrderItems())
         {

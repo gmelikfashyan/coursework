@@ -15,17 +15,16 @@ public class UserController
 {
     private UserService userService;
 
-    @GetMapping("login")
-    public String getRegistration(Model model)
-    {
-        model.addAttribute("userReg", new User());
-        return "authorization";
-    }
-
     @PostMapping("registration")
     public String addUser(@ModelAttribute("userReg") User user)
     {
         userService.addUser(user);
         return "redirect:login";
+    }
+    @GetMapping("login")
+    public String getRegistration(Model model)
+    {
+        model.addAttribute("userReg", new User());
+        return "authorization";
     }
 }

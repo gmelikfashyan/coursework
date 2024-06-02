@@ -73,7 +73,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px; /* Добавлен отступ между блоками */
+    margin-bottom: 50px;
 }
 
 
@@ -98,11 +98,9 @@ main{
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Располагаем элементы по центру по горизонтали */
-    align-items: center; /* Располагаем элементы по центру по вертикали */
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    /*background: #EF8888;*/
-    background: gold;
 }
 
 .simpleOrder {
@@ -149,10 +147,10 @@ main{
 
 
 .info {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
-    font-size: 14px; /* Уменьшаем размер шрифта */
-    margin-bottom: 10px; /* Уменьшаем отступ между информацией и описанием */
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 .account-main {

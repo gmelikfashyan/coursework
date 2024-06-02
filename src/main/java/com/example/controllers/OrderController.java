@@ -1,7 +1,7 @@
 package com.example.controllers;
 
 import com.example.entities.AmountsProduct;
-import com.example.security.CustomUserDetails;
+import com.example.security.MyUserDetails;
 import com.example.services.ProductService;
 import com.example.services.EmailService;
 import com.example.services.OrderService;
@@ -34,6 +34,15 @@ public class OrderController {
     private AmountsProduct amountsProduct = new AmountsProduct(1);
 
 
+    @GetMapping("/account")
+    public String getAccount(Model model , @AuthenticationPrincipal MyUserDetails myUserDetails)
+    {
+        Long id = myUserDetails.getUser().getId();
+        model.addAttribute("amountsProduct", amountsProduct);
+        model.addAttribute("user", userService.findUserById(id));
+        model.addAttribute("orders", orderService.getOrdersByUserId(id));
+        return "account";
+    }
     @GetMapping("/")
     public String getStart()
     {
@@ -46,15 +55,5 @@ public class OrderController {
         model.addAttribute("amountsProduct", amountsProduct);
         model.addAttribute("productList", productService.findAll());
         return "productcatalog";
-    }
-
-    @GetMapping("/account")
-    public String getAccount(Model model , @AuthenticationPrincipal CustomUserDetails customUserDetails)
-    {
-        Long id = customUserDetails.getUser().getId();
-        model.addAttribute("amountsProduct", amountsProduct);
-        model.addAttribute("user", userService.findUserById(id));
-        model.addAttribute("orders", orderService.getOrdersByUserId(id));
-        return "account";
     }
 }

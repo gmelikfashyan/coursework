@@ -1,0 +1,161 @@
+.cart-main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+    margin-right: 50px;
+}
+
+.cart-main p {
+    color: black;
+    text-shadow: none;
+}
+
+.cart {
+    position: relative;
+    left: 50px;
+    width: 1000px;
+}
+
+.arrangeForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 250px;
+    padding: 20px;
+    color: #1c1c1c;
+    border: .0625rem solid rgba(0, 0, 0, .08);
+    height: 260px;
+}
+
+.arrangeForm h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.arrangeForm p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+.arrangeButton {
+    align-self: end;
+    margin-top: 40px;
+    width: 100%;
+    background-color: #3B3C36;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 24px;
+    font-family: 'Noto Sans';
+}
+
+.arrangeButton:hover {
+    background-color: #1c1c1c;
+    color: white;
+}
+
+#totalSum {
+    font-weight: 600;
+    font-size: 18px;
+    color: #1c1c1c;
+    border: none;
+}
+
+
+.oneProduct {
+    height: 240px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    border-bottom: .0625rem solid rgba(0, 0, 0, .08);
+    border-top: .0625rem solid rgba(0, 0, 0, .08);
+    margin-bottom: 50px;
+}
+
+.card {
+    color: black;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    text-decoration: none;
+    justify-items: center;
+    align-items: center;
+}
+.card-brand {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.card-name {
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+.name-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.card img {
+    max-width: 151px;
+    height: 218px;
+}
+
+.card a {
+    color: black;
+    text-decoration: none;
+}
+
+.deleteBut:hover {
+    cursor: pointer;
+}
+.deleteBut {
+    background: white;
+    margin-left: 10px;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+}
+
+
+.arrangeButton:hover {
+    background: white;
+    color: black;
+}
+
+.arrangeButton:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+}
+
+
+
+.deleteBut {
+    align-self: center;
+    background-image: url('/static/images/urna.png');
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.cart-main {
+    padding-top: 20px;
+    column-gap: 60px;
+    margin-right: 0px;
+}
+.cart {
+    max-width: 65%;
+}

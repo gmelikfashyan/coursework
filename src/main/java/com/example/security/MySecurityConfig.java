@@ -1,7 +1,7 @@
 package com.example.security;
 
 
-import com.example.services.CustomUserServiceDetails;
+import com.example.services.MyUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -17,7 +17,14 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
-public class SecurityConfig {
+public class MySecurityConfig {
+
+    @Bean
+    public UserDetailsService userDetailsService()
+    {
+        return new MyUserDetailsService();
+    }
+
     @Bean
     public BCryptPasswordEncoder passwordEncoder()
     {
@@ -25,18 +32,12 @@ public class SecurityConfig {
     }
 
     @Bean
-    public UserDetailsService userDetailsService()
-    {
-        return new CustomUserServiceDetails();
-    }
-
-    @Bean
     public AuthenticationProvider authenticationProvider()
     {
-        var provider = new DaoAuthenticationProvider();
-        provider.setUserDetailsService(userDetailsService());
-        provider.setPasswordEncoder(passwordEncoder());
-        return provider;
+        var pvd = new DaoAuthenticationProvider();
+        pvd.setUserDetailsService(userDetailsService());
+        pvd.setPasswordEncoder(passwordEncoder());
+        return pvd;
     }
 
     @Bean

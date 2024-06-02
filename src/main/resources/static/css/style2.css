@@ -1,301 +1,3 @@
-body
-{
-    background-color: white;
-    margin: 0;
-}
-
-header
-{
-    height: 163px;
-}
-
-header *
-{
-    z-index: 5;
-}
-
-#header1
-{
-    display: flex;
-    justify-content: center; /* Выравнивание элементов по горизонтали по центру */
-    align-items: center; /* Выравнивание элементов по вертикали по центру */
-    content: "";
-    position: relative;
-    background: crimson;
-    height: 163px;
-    width: 100%;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
-header #header1 img
-{
-    width: 90px;
-    height: 90px;
-}
-
-.nav
-{
-    display: block;
-    font-size: 14px;
-    text-transform: uppercase;
-    background-color: gold;
-    padding: 12px;
-    border-radius: 15px;
-    position: sticky;
-    top: 0;
-
-    z-index: 1000;
-}
-
-.nav  .nav_link
-{
-    margin: 0 15px;
-
-    text-decoration: none;
-    color: crimson;
-    transition: color 0.2s linear;
-    position: relative;
-    list-style: circle;
-}
-
-.nav_link::after
-{
-    content: "";
-    display: block;
-    width: 100%;
-    height: 3px;
-    opacity: 0;
-
-    background-color: white;
-
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-
-    transition: opacity 0.2s linear;
-
-}
-
-.nav_link:hover
-{
-    color: white;
-}
-
-.nav_link:hover::after
-{
-    opacity: 1;
-}
-
-
-#начало
-{
-    font-size:100px;
-
-}
-#начало::first-letter
-{
-    font-size:150px;
-    margin-top: -50px;
-    color: gold;
-}
-
-.currentPage {
-    background-color: #ff8888;
-}
-
-.currentPage p {
-    color: black;
-}
-
-.footer
-{
-    display: grid;
-
-    margin-top: 10%;
-
-    grid-template-columns: 40% 20% 15% 25% ;
-    grid-template-rows: 60% 40%;
-
-    grid-template-areas:
-    "A Q S C"
-    "i Q S C";
-
-    column-gap: 1%;
-
-    color: black;
-
-    padding: 5%;
-
-    border-radius: 15px;
-
-    background-color:  gold;
-}
-
-.footer h2
-{
-    text-decoration: none;
-}
-.footer h2::after
-{
-    content: '';
-    display: block;
-    position: relative;
-
-    height: 3px;
-    width: 3rem;
-    top: 3px;
-
-    margin-bottom: -0.5rem;
-
-    background-color: black;
-
-}
-.icon2 p
-{
-    color: white;
-}
-.AboutUs
-{
-    grid-area: A ;
-}
-.icons
-{
-    grid-area: i ;
-    justify-self: start;
-}
-.QuickLinks
-{
-    grid-area: Q ;
-}
-.Shop
-{
-    grid-area: S ;
-}
-.Contact
-{
-    grid-area: C ;
-}
-
-.footer h2
-{
-    color: black;
-}
-#AboutUsp
-{
-    font-size: 15px !important;
-    line-height: 14px;
-}
-.QuickLinks li
-{
-    list-style: none;
-}
-.QuickLinks li a
-{
-    font-size: 16px !important;
-    line-height: 25px;
-    text-decoration: none;
-    color: black;
-}
-.Shop li
-{
-    list-style: none;
-}
-.Shop li a
-{
-    font-size: 16px !important;
-    line-height: 25px;
-    text-decoration: none;
-    color: black;
-}
-.Contact li
-{
-    list-style: none;
-}
-.Contact li a
-{
-    font-size: 16px !important;
-    line-height: 25px;
-    text-decoration: none;
-    color: black;
-}
-.Contact #img_tel
-{
-    display: inline-block;
-
-    height: 20px;
-    width: 20px;
-}
-.Contact #img_email
-{
-    display: inline-block;
-
-    height: 20px;
-    width: 20px;
-}
-
-#AboutUsh2:hover
-{
-    transition: 0.5s;
-    transform: scale(1.2);
-    transform: translateY(-10px);
-    color:rgb(219, 27, 225)
-}
-#QuickLinksh2:hover
-{
-    transition: 0.5s;
-    transform: scale(1.2);
-    transform: translateY(-10px);
-    color:rgb(219, 27, 225)
-}
-#Shoph2:hover
-{
-    transition: 0.5s;
-    transform: scale(1.2);
-    transform: translateY(-10px);
-    color:rgb(219, 27, 225)
-}
-#конец:hover
-{
-    transition: 0.5s;
-    transform: scale(1.2);
-    transform: translateY(-10px);
-    color:rgb(219, 27, 225)
-}
-.QuickLinks li:hover
-{
-    transition: 0.5s;
-    transform: scale(1.05);
-}
-.QuickLinks li a:hover
-{
-    transition: 0.5s;
-    transform: scale(2);
-    color:crimson;
-}
-.Shop li:hover
-{
-    transition: 0.5s;
-    transform: scale(1.05);
-}
-.Shop li a:hover
-{
-    transition: 0.5s;
-    transform: scale(2);
-    color:crimson;
-}
-.Contact li:hover{
-    transition: 0.5s;
-    transform: scale(1.05);
-}
-
-.Contact li a:hover
-{
-    transition: 0.5s;
-    transform: scale(2);
-    color:crimson;
-}
 .main-hello{
     position: relative;
     display: flex;
@@ -551,4 +253,167 @@ footer p{
 }
 .social-footer {
     justify-content: flex-start;
+}
+.list-clothes li{
+    display: inline;
+    margin: 0 0px;
+}
+.list-clothes .card {
+    margin-bottom: 5px;
+    width: 247px;
+}
+.list-clothes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 247px);
+    column-gap: 20px;
+    row-gap: 50px;
+    justify-content: center;
+    overflow-x: scroll;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    margin-top: 0px;
+    padding: 0px;
+}
+.list-clothes img {
+    width: 246px;
+    height: 370px;
+}
+.list-clothes .brand {
+    font-size: 14px;
+    max-width: 100%;
+    max-height: 19px;
+    overflow: hidden;
+    font-weight: 300;
+    margin: 0;
+    margin-top: 10px;
+}
+.list-clothes .card-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    max-width: 100%;
+    max-height: 50px;
+    min-height: 50px;
+    overflow-y: hidden;
+    word-break: break-word;
+}
+.list-clothes::-webkit-scrollbar{
+    height: 4px;
+    background-color: transparent;
+}
+.list-clothes::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #8a8a8abb;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+}
+.section{
+    margin: 70px 0 20px;
+}
+
+.info {
+    font-family: 'Noto Sans', serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+.main-aut {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    align-content: center;
+}
+
+.anotherReg {
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #F5F5F5 ;
+    border: none;
+    background-color: transparent;
+    transition: color 0.3s ease;
+}
+.anotherReg:hover {
+    color: #808080;
+}
+
+.headAut
+{
+    color: white;
+}
+
+.regBut {
+    width: calc(100% - 40px);
+}
+
+.form-enter
+{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    padding: 40px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-enter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.form-enter h2 {
+    margin-bottom: 30px;
+}
+
+
+.enterBut {
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #F5F5F5;
+    color: #1c1c1c;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.enterBut:hover {
+    background-color: #808080;
+}
+.textInput input {
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 1px solid;
+    border-radius: 10px;
+    width: calc(100% - 40px);
+    padding: 10px;
+}
+
+#error-message {
+    display: none;
+    margin-top: 10px;
+}
+.textInput {
+    margin-bottom: 30px;
 }
